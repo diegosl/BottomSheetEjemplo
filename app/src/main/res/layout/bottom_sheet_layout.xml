@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/modalBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Calificar al Restaurante"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorGrisOscuro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Seleccione un puntaje"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RatingBar
+                android:id="@+id/rb_estrellas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="16dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:secondaryProgressTint="@color/colorAmarillo"
+                android:progressTint="@color/colorAmarillo"
+                tools:rating="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Cómo te trató el local?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RatingBar
+                android:id="@+id/rb_trato_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="16dp"
+                style="@style/CustomRatingBar"
+                android:numStars="3"
+                android:stepSize="1"
+                tools:rating="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Qué te pareció la zona?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RatingBar
+                android:id="@+id/rb_zona_reparto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="16dp"
+                android:numStars="3"
+                android:stepSize="1"
+                style="@style/CustomRatingBar"
+                tools:rating="2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Te abonó los excedentes?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <RadioButton
+                    android:id="@+id/rb_abono_extra_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sí"
+                    android:textColor="@color/colorGrisOscuro"/>
+                <RadioButton
+                    android:id="@+id/rb_abono_extra_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="No"
+                    android:textColor="@color/colorGrisOscuro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Te dio comida?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <RadioButton
+                    android:id="@+id/rb_ofrecio_comida_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sí"
+                    android:textColor="@color/colorGrisOscuro"/>
+                <RadioButton
+                    android:id="@+id/rb_ofrecio_comida_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="No"
+                    android:textColor="@color/colorGrisOscuro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Te hizo hacer tareas extras?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <RadioButton
+                    android:id="@+id/rb_tarea_extra_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sí"
+                    android:textColor="@color/colorGrisOscuro"/>
+                <RadioButton
+                    android:id="@+id/rb_tarea_extra_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="No"
+                    android:textColor="@color/colorGrisOscuro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="¿Volverías al local?"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp">
+                <RadioButton
+                    android:id="@+id/rb_volver_local_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sí"
+                    android:textColor="@color/colorGrisOscuro"/>
+                <RadioButton
+                    android:id="@+id/rb_volver_local_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="No"
+                    android:textColor="@color/colorGrisOscuro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Aclaración"
+                android:textSize="18dp"
+                android:textColor="@color/colorGrisClaro"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/comentario_local"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:hint="Por favor dejanos un comentario"
+                    android:fontFamily="@font/montserrat"
+                    android:inputType="text"
+                    android:maxLength="100"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_enviar_calificacion_local"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="Enviar"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorBlanco" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
