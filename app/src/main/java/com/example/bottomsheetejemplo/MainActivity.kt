@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnBottomSheet = findViewById<Button>(R.id.btn_bottom_sheet)
+        val b = 2
 
         btnBottomSheet.setOnClickListener {
             val bottomSheetFragment = MiBottomSheet()
