@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val b = 2
         val c = 3
         val d = 4
+        val e = 5
 
         btnBottomSheet.setOnClickListener {
             val bottomSheetFragment = MiBottomSheet()
